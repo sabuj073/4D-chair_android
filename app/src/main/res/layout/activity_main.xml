@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <VideoView
+                android:id="@+id/play_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/play_video_file_path_editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Browse a video file path or input web video file url."
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/browse_video_file_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Browse Video File" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/play_video_start_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Play" />
+
+            <Button
+                android:id="@+id/play_video_pause_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Pause" />
+
+            <Button
+                android:id="@+id/play_video_continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Continue" />
+
+            <Button
+                android:id="@+id/play_video_stop_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Stop" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/play_video_replay_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Replay Video" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ProgressBar
+                android:id="@+id/play_video_progressbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="313dp"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/sec"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="0" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/f_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="Start"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/f_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="start_time"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/f_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="Stop"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/f_stop_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="stop_time"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/s_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="Start"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/s_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="start_time"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/s_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="Stop"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/s_stop_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="stop_time"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bluetooth_connect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="10dp"
+            android:text="Connect Bluetooth"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
